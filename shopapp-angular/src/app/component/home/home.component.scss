@@ -1,0 +1,89 @@
+@import '../../style/shared-styles.scss';
+
+.intro-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-category {
+    width: 200px;
+    background-color: transparent;
+}
+
+.search-input {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.form-control::placeholder {
+    
+}
+
+.product-item {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .1), 0 2px 6px 2px rgba(60, 64, 67, .15);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    color: black;
+}
+
+.product-description {
+    color: black;
+}
+
+.product-warranty {
+    color: black;
+}
+
+.product-price {
+    color: $shopapp-color;
+    font-weight: 700;
+}
+
+.product-del-price {
+    color: #707070;
+}
+
+.product-rating {
+    color: #f59e0b;
+    margin-top: 10px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.space-x {
+    margin: 0 5px;
+}
+
+.btn-danger {
+    background-color: $shopapp-color;
+}
+
+.btn-primary {
+    background-color: $shopapp-color;
+    border-color: $shopapp-color;    
+}
+
+.btn.btn-primary {
+    margin-left: 10px;
+}

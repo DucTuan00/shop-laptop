@@ -1,0 +1,64 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Body -->
+<div class="container">
+    <!-- Intro -->
+    <div class="intro-section">
+        
+    </div>
+
+    <!-- Search box -->
+    <div class="search-box">
+        <input type="text" class="form-control search-input" 
+            placeholder="Tìm sản phẩm"
+            [(ngModel)]="keyword">
+        <select class="form-control product-category"
+            [(ngModel)]="selectedCategoryId">
+            <option [value]="0">Tất cả</option>
+            <option *ngFor="let category of categories" [value]="category.id">
+                {{ category.name }}
+            </option>
+        </select>
+        <button class="btn btn-primary ml-2" (click)="searchProducts()">Tìm kiếm</button>
+    </div>
+
+    <!-- Product -->
+    <div class="row">
+        <div class="col-lg-3 col-md-6" *ngFor="let product of products">
+            <div class="product-item" (click)="onProductClick(product.id)">
+                <img [src]="product.url" alt="Product Image" class="product-image">
+                <h3 class="product-name">{{ product.name }}</h3>
+                <p class="product-description">{{ product.description }}</p>
+                <p class="product-price">Giá: {{ product.price | currency:'VND':'symbol':'1.0-0' }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item" *ngIf="currentPage > 0">
+                <a class="page-link" href="#" (click)="onPageChange(0)">Trang Đầu</a>
+            </li>
+            <li class="page-item" *ngIf="currentPage > 0">
+                <a class="page-link" href="#" (click)="onPageChange(currentPage - 1)">Trước</a>
+            </li>
+            <ng-container *ngFor="let page of visiblePages">
+                <li class="page-item" [ngClass]="{'active': page === currentPage}">
+                    <a class="page-link" href="#" (click)="onPageChange(page)">{{ page + 1 }}</a>
+                </li>
+            </ng-container>
+            <li class="page-item" *ngIf="currentPage < totalPages - 1">
+                <a class="page-link" href="#" (click)="onPageChange(currentPage + 1)">Tiếp</a>
+            </li>
+            <li class="page-item" *ngIf="currentPage < totalPages - 1">
+                <a class="page-link" href="#" (click)="onPageChange(totalPages - 1)">Trang Cuối</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>

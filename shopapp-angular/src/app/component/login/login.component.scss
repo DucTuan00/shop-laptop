@@ -1,0 +1,98 @@
+@import '../../style/shared-styles.scss';
+
+.login-form {
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 500px;
+    border: 1px solid rgb(32, 34, 60);
+    align-items: center;
+    justify-content: center;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: transparent;
+    border: none;
+}
+
+.form-control:focus {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.divider-nospace {
+    border-top: 1px solid black;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+}
+
+.checkbox-text {
+    color: #3774f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+//Checkbox color when selected
+.checkbox-text input[type="checkbox"]:checked {
+    border-color: black;
+    background-color: $shopapp-color;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+
+.register-link {
+    color: $shopapp-color;
+    text-decoration: none;
+}
+
+.access-right {
+    margin-top: 20px;
+    width: 200px;
+    color: black;
+    border: 1px solid;
+}
+
+.access-right:focus {
+    border: 1px solid;
+}
+
+.form-control::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
+
+.login-button {
+    background: $shopapp-color;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    border: none;
+}
+
+.divider {
+    height: 1px;
+    background-color: black;
+    margin: 20px;
+}

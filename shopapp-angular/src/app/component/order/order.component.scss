@@ -1,0 +1,46 @@
+@import '../../style/shared-styles.scss';
+
+.intro-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.form-control {
+    border: 1px solid rgb(147, 149, 156);
+}
+
+table {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    border-collapse: separate;
+    border: 1px solid black;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.product-name {
+    margin-right: 10px;
+}
+
+.btn-color {
+    background: $shopapp-color;
+    color: #fff;
+    border-radius: 20px;
+    width: 200px;
+}

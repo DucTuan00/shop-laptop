@@ -1,0 +1,46 @@
+@import '../../style/shared-styles.scss';
+
+.confirmation-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.product-name {
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    border-collapse: separate;
+    border: 1px solid black;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-color {
+    background: $shopapp-color;
+    color: white;
+    border-radius: 20px;
+    width: 200px;
+}
